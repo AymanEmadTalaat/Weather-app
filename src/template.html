@@ -18,6 +18,12 @@
       href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
 
   <body>
@@ -31,6 +37,7 @@
           name="enter-city"
           type="text"
           placeholder="London"
+          autocomplete="off"
         />
       </div>
 
@@ -48,6 +55,12 @@
         <span class="humidity"></span>
         <span class="wind-speed"></span>
       </div>
+    </div>
+
+    <div class="loading-parent">
+      <div
+        class="loading animate__animated animate__flash animate__infinite"
+      ></div>
     </div>
   </body>
 </html>

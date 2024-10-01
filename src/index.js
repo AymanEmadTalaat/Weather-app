@@ -99,6 +99,8 @@ async function getData() {
   );
 
   try {
+    displayLoading();
+
     const response = await fetch(request);
     const weatherData = await response.json();
 
@@ -113,6 +115,8 @@ async function getData() {
       humidity: `${weatherData.currentConditions.humidity}%`,
       windSpeed: `${weatherData.currentConditions.windspeed}km/h`,
     };
+
+    hideLoading();
 
     dateEl.textContent = weatherDataObj.date;
     addressEl.textContent = weatherDataObj.address;
@@ -204,16 +208,29 @@ async function getData() {
     console.log(error);
   }
 }
+///////////////////////////////////////////////////////////////////
+const loadingParent = document.querySelector(".loading-parent");
+
+function displayLoading() {
+  loadingParent.style.cssText = "display: block;";
+
+  setTimeout(() => {
+    loadingParent.style.cssText = "display: none;";
+  }, 5000);
+}
+
+function hideLoading() {
+  loadingParent.style.cssText = "display: none;";
+}
 
 export function appendData() {
   if (searchField.value === "") {
-    alert("You didn't type a country!");
     searchIcon.ariaDisabled;
   } else if (searchField.value.length < 4) {
-    alert("The shortest country name is 4 letters!");
     searchIcon.ariaDisabled;
   }
 
   getData();
+
   searchField.value = "";
 }
