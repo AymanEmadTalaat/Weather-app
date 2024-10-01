@@ -1,0 +1,120 @@
+:root {
+  --font-size-: clamp(0.9rem, 2vw, 1.2rem);
+  --color1-: #71a5de;
+  --color2-: #83b0e1;
+  --color3-: #aecbeb;
+  --color4-: #e1ecf7;
+  --color5-: #f8f9fb;
+  --color6-: #0e0e0e;
+  --color7-: #1a759f;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth;
+  font-family: "Concert One", sans-serif;
+  font-size: var(--font-size-);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1509803874385-db7c23652552?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Div that contain weather details */
+.container {
+  width: 450px;
+  background: var(--color7-);
+  color: var(--color5-);
+  margin-block: 1rem;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color6-);
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.9;
+}
+
+.container > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.container .div1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.container .div2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.container .div3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Search field */
+#enter-city {
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 10px 15px;
+  background-color: var(--color5-);
+}
+
+#enter-city:focus {
+  outline: 1px solid var(--color6-);
+}
+
+/* Search icon */
+.search {
+  cursor: pointer;
+}
+
+/* Weather icon */
+#image {
+  justify-content: center;
+}
+
+#image > span {
+  font-size: 5rem;
+  color: var(--color5-);
+}
+
+.temp {
+  color: var(--color5-);
+}
+
+/* Weather description */
+#description {
+  padding-inline: 10px;
+  text-align: center;
+}

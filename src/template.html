@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="div1">
+        <label for="enter-city">
+          <span class="material-symbols-outlined search"> search </span>
+        </label>
+        <input
+          id="enter-city"
+          name="enter-city"
+          type="text"
+          placeholder="London"
+        />
+      </div>
+
+      <div class="div2">
+        <span class="date"></span>
+        <span class="address"></span>
+      </div>
+
+      <div id="image"></div>
+
+      <span class="temp"></span>
+      <p id="description"></p>
+
+      <div class="div3">
+        <span class="humidity"></span>
+        <span class="wind-speed"></span>
+      </div>
+    </div>
+  </body>
+</html>
