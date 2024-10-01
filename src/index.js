@@ -224,12 +224,6 @@ function hideLoading() {
 }
 
 export function appendData() {
-  if (searchField.value === "") {
-    searchIcon.ariaDisabled;
-  } else if (searchField.value.length < 4) {
-    searchIcon.ariaDisabled;
-  }
-
   getData();
 
   searchField.value = "";
